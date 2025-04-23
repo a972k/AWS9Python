@@ -1,6 +1,6 @@
 import random
 
-print("🥊 Welcome to your next boxing round, Champion!")
+print("Welcome to your next boxing round, Champion!")
 
 moves = {
     1: "The Jab",
@@ -13,6 +13,10 @@ moves = {
 
 winning_rules = {
     1: 3, 2: 1, 3: 5, 4: 2, 5: 6, 6: 4   
+}
+
+loosing_rules = {
+    1: 5, 2: 3, 3: 6, 4: 2, 5: 4, 6: 1   
 }
 
 print("\nChoose your move:")
@@ -35,8 +39,8 @@ print(f"Opponent chose: {moves[opponent_move]}")
 if player_move == opponent_move:
     print("It's a tie!")
 elif winning_rules[player_move] == opponent_move:
-    print("You win this round! 🏆")
+    print("You win this round!")
 elif winning_rules[opponent_move] == player_move:
-    print("Opponent wins this round. 😮")
+    print("Opponent wins this round.")
 else:
     print("No clear winner. That was unexpected.")
